@@ -1,5 +1,5 @@
 ## installation
-clone this repository and run `npm install`
+clone this repository by running `git clone https://github.com/Flursh/tweego-vite-boilerplate.git` and run `npm install`
 
 ## structure
 ```
