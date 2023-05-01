@@ -9,7 +9,7 @@
     "openTest": "open ./test.html",
     "test": "npm run compile && tweego -o ./test.html ./story -t --head=\"./story/head-content.txt\" && npm run openTest",
     "test:watch": "concurrently \"npm run compile:watch\" \"tweego -o ./test.html ./story --head=\"./story/head-content.txt\" -w -t\" \"npm run openTest\"",
-    "build:watch": "concurrently \"npm run compile:watch\" \"tweego -o ./test.html ./story --head=\"./story/head-content.txt\" -w\" \"npm run openStory\"",
+    "build:watch": "concurrently \"npm run compile:watch\" \"tweego -o ./index.html ./story --head=\"./story/head-content.txt\" -w\" \"npm run openStory\"",
     "build": "npm run compile && tweego -o ./index.html ./story --head=\"./story/head-content.txt\" && npm run openStory",
     "compile": "tsc && vite build",
     "compile:watch": "tsc && vite build --watch"

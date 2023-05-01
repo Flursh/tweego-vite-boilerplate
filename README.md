@@ -23,6 +23,12 @@ clone this repository by running `git clone https://github.com/Flursh/tweego-vit
 ├── assets/vite.config.js
 ├── package.json
 ```
+> **Warning**
+> for **windows** users, the 'open' command will not work, you will have to modify the package.json file `scripts` section with :
+```json
+"openStory": "explorer \"index.html\"",
+"openTest": "explorer \"test.html\"",`
+```
 
 ### assets
 story any static files you want to have access to from your story, like images for example. You link to them from your twee files relatively from the generate file, like `./assets/pie.jpg`
