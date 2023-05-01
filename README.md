@@ -27,7 +27,7 @@ clone this repository by running `git clone https://github.com/Flursh/tweego-vit
 > for **windows** users, the 'open' command will not work, you will have to modify the package.json file `scripts` section with :
 ```json
 "openStory": "explorer \"index.html\"",
-"openTest": "explorer \"test.html\"",`
+"openTest": "explorer \"test.html\"",
 ```
 
 ### assets
@@ -99,3 +99,24 @@ import './css/UI.css';
 - `npm run build:watch` : same as `build` but recompiles on change in either `/story` or `/src`
 - `npm run compile` : compiles the `/src` folder
 - `npm run compile:watch` : compiles the `/src` folder and eveytime its content changes
+
+### using SASS
+To use sass (or stylus, or Less, see the vite documentation), just add the package as a dev dependency with `npm install sass -D` and you can start using `.scss` files, remember that anything that isn't imported will not be available in the compiled css.
+
+`page.scss` :
+```scss
+@import './footer';
+
+#page {
+    padding: 1em 0;
+    & header, & article, & footer {
+        padding: .5em 2em;
+    }
+}
+```
+`main.ts` :
+```ts
+// css
+import "./page.scss";
+// continue
+```
